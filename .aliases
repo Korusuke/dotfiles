@@ -1,0 +1,6 @@
+alias setclip="xclip -selection c"
+alias getclip="xclip -selection c -o"
+
+# cloud aliases
+# copy and edit the below template line
+# alias aws="ssh ubuntu@xx.xxx.xx.xxx"
