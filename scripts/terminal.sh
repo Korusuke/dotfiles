@@ -47,4 +47,4 @@ echo -e "         to complete shell change      "
 echo -e "=======================================\n\n\n"
 
 # Change default shell
-chsh -s $(which zsh) $USER
+chsh -s /usr/bin/zsh $USER

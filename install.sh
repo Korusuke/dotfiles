@@ -2,7 +2,7 @@
 
 echo -e "This script should only be executed on a fresh install of linux"
 echo -e "Executing this script may may result in file loss"
-echo -e "=======================================\n\n\n"
+echo -e "=============================================\n\n"
 
 while true; do
     echo -e "Are you sure you want to proceed?"
@@ -14,8 +14,16 @@ while true; do
     esac
 done
 
-echo -e "======================================="
-echo -e "           Configuring Linux           "
-echo -e "=======================================\n\n"
+echo -e "============================================="
+echo -e "                Updating Linux               "
+echo -e "$ sudo apt-get update && sudo apt-get upgrade -y"
+echo -e "=============================================\n\n"
 
+sudo apt-get update && sudo apt-get upgrade -y
+
+echo -e "============================================="
+echo -e "              Configuring Linux              "
+echo -e "=============================================\n\n"
+
+/bin/bash scripts/programs.sh
 /bin/bash scripts/terminal.sh

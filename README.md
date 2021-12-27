@@ -6,5 +6,5 @@
 
 ```bash
 git clone https://github.com/korusuke/dotfiles
-bash install.sh
+cd dotfiles && bash install.sh
 ```
