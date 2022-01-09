@@ -1,10 +1,5 @@
 #!/bin/bash
 
-echo -e "============================================="
-echo -e "      Attempting to install following        "
-echo -e "           Applications / Programs           "
-echo -e "=============================================\n\n"
-
 # Install docker
 sudo apt install docker docker.io -y
 sudo usermod -aG docker $USER
