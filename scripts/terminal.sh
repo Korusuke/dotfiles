@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -i
 
 echo -e "======================================="
 echo -e "     Installing necessary packages     "
@@ -38,9 +38,10 @@ cp .aliases ~/
 cp .p10k.zsh ~/
 cp .zshrc ~/
 
-# configure conda in zsh
-conda init zsh
-
+if [[ "$1" == "full" ]]; then
+    # configure conda in zsh
+    source ~/.bashrc && conda init zsh
+fi
 # Change default shell
 chsh -s /usr/bin/zsh $USER
 

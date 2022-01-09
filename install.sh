@@ -67,4 +67,4 @@ echo -e "============================================="
 echo -e "             All Programs Installed          "
 echo -e "=============================================\n\n"
 
-/bin/bash scripts/terminal.sh
+./scripts/terminal.sh $SELECTED_VARIANT
