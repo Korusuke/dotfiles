@@ -1,44 +1,5 @@
 #!/bin/bash
 
-echo -e "============================================="
-echo -e "      Attempting to install following        "
-echo -e "           Applications / Programs           "
-echo -e "=============================================\n\n"
-
-# adb tools
-sudo apt-get install adb -y
-
-# Install pip3
-sudo apt install python3-pip -y
-
-# Node and npm
-sudo apt install nodejs npm -y
-sudo npm install --global surge
-
-# Conda
-wget https://repo.anaconda.com/archive/Anaconda3-2021.11-Linux-x86_64.sh -O Anaconda.sh
-chmod +x Anaconda.sh && ./Anaconda.sh -b
-eval "$($HOME/anaconda3/bin/conda shell.bash hook)"
-conda init
-rm Anaconda.sh
-
-# Install docker
-sudo apt install docker docker.io -y
-sudo usermod -aG docker $USER
-
-# Install docker-compose
-sudo apt install docker-compose -y
-
-# awscli
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-unzip awscliv2.zip
-sudo ./aws/install
-rm -rf aws
-rm -rf awscliv2.zip
-
-# boto3
-pip3 install boto3
-
 # Installing vncviewer
 curl "https://www.realvnc.com/download/file/viewer.files/VNC-Viewer-6.21.1109-Linux-x64.deb" -o "vncviewer.deb"
 sudo apt install ./vncviewer.deb -y
@@ -46,13 +7,6 @@ rm vncviewer.deb
 
 # Install rclone
 sudo apt install rclone -y
-
-# kopia-ui
-curl -s https://kopia.io/signing-key | sudo apt-key add -
-echo "deb http://packages.kopia.io/apt/ stable main" | sudo tee /etc/apt/sources.list.d/kopia.list
-sudo apt update -y
-sudo apt install kopia -y
-sudo apt install kopia-ui -y
 
 # discord
 sudo apt install discord -y
@@ -100,3 +54,4 @@ sudo apt install libgl1-mesa-glx libegl1-mesa libxcb-xtest0 -y
 wget https://zoom.us/client/latest/zoom_amd64.deb
 sudo apt install ./zoom_amd64.deb -y
 rm zoom_amd64.deb
+

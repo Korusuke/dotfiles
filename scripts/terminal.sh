@@ -38,6 +38,12 @@ cp .aliases ~/
 cp .p10k.zsh ~/
 cp .zshrc ~/
 
+# configure conda in zsh
+conda init zsh
+
+# Change default shell
+chsh -s /usr/bin/zsh $USER
+
 echo -e "======================================="
 echo -e "             ZSH Configured            "
 echo -e "         Check above for errors        "
@@ -45,6 +51,3 @@ echo -e "======================================="
 echo -e "            Logout and Login           "
 echo -e "         to complete shell change      "
 echo -e "=======================================\n\n\n"
-
-# Change default shell
-chsh -s /usr/bin/zsh $USER
